@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>로지텍(Logitech) 마우스 상세 &amp; 브랜드 쇼케이스</title>
+    <meta name="description" content="로지텍 M590 Silent 멀티 디바이스 무선 마우스 상세 기능 및 브랜드 스토리 쇼케이스" />
+    <meta property="og:title" content="로지텍(Logitech) 마우스 상세 &amp; 브랜드 쇼케이스" />
+    <meta property="og:description" content="로지텍 M590 Silent 멀티 디바이스 무선 마우스 상세 기능 및 브랜드 스토리 쇼케이스" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- Student Project Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <span>본 사이트는 학생 연구 및 과제 제출용으로 제작된 비공식 페이지입니다.</span>
+      <span class="disclaimer-sep" aria-hidden="true">·</span>
+      <span>Google AI Studio 사용</span>
+      <span class="disclaimer-sep" aria-hidden="true">·</span>
+      <span>비상업용 목적 사이트</span>
+    </div>
+
+    <!-- Top Header (#D6F5F0 Accent) -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <header class="top-header">
+      <div class="container top-header-inner">
+        <div class="header-brand-wrap">
+          <!-- TODO: Replace with GitHub repository link/path -->
+          <img
+            src="./assets/images/logo.webp"
+            alt="Logitech Logo"
+            class="header-logo-img"
+            data-fallback="true"
+          />
+          <span class="header-badge">공식 제품 쇼케이스</span>
+        </div>
+
+        <div class="header-actions">
+          <button id="drawer-toggle-btn" class="drawer-toggle-btn" aria-label="상단 사양 서랍 토글">
+            상단 사양 서랍 ▼
+          </button>
+          <button id="Button_T" class="theme-toggle-btn" aria-label="라이트/다크 모드 전환">
+            다크 모드
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Popup / Drawer (Cubic Bezier 1s Animation) -->
+    <section id="top-drawer" class="top-drawer" aria-expanded="false">
+      <div class="container">
+        <div class="drawer-header">
+          <div>
+            <span class="drawer-tag">Logi Options+ &amp; 제품 사양 가이드</span>
+            <h3 class="drawer-title">M590 Silent 멀티 디바이스 무소음 마우스</h3>
+            <p class="drawer-desc">
+              Easy-Switch™ 듀얼 페어링, Flow 크로스 컴퓨터 제어, Smart Actions 매크로 기능을 갖춘 무선 무소음 마우스입니다.
+            </p>
+          </div>
+          <button id="drawer-close-btn" class="drawer-close-btn" aria-label="서랍 닫기">✕</button>
+        </div>
+
+        <div class="drawer-grid">
+          <div class="drawer-card">
+            <span style="font-size:18px;">💾</span>
+            <h4>소프트웨어 다운로드</h4>
+            <p>Logi Options+ 최신 버전 (Windows 및 macOS 지원)</p>
+          </div>
+          <div class="drawer-card">
+            <span style="font-size:18px;">🔄</span>
+            <h4>Logitech FLOW™</h4>
+            <p>화면 간 마우스 커서 이동 및 텍스트/파일 자유로운 복사</p>
+          </div>
+          <div class="drawer-card">
+            <span style="font-size:18px;">🔋</span>
+            <h4>배터리 &amp; 보증</h4>
+            <p>AA 배터리 1개로 최대 24개월 사용 및 1년 제한 하드웨어 보증</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Bar (GNB) -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <nav class="main-nav">
+      <div class="container nav-inner">
+        <button id="Button_1" class="nav-btn active" data-tab="main">
+          메인 페이지 &amp; 제품
+        </button>
+        <button id="Button_2" class="nav-btn" data-tab="features">
+          기능 소개
+        </button>
+        <button id="Button_3" class="nav-btn" data-tab="brand">
+          브랜드 소개
+        </button>
+      </div>
+    </nav>
+
+    <!-- =======================================================================
+         VIEW 1: 메인 페이지 (Main Page)
+         ======================================================================= -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <main id="tab-main" class="tab-view active">
+      <div class="container">
+        <div class="hero-header">
+          <div class="pill-badge">
+            <span class="status-indicator"></span>
+            차세대 멀티 디바이스 사일런트 테크놀로지
+          </div>
+          <h1 class="hero-title">로지텍 M590 Silent</h1>
+          <p class="hero-subtitle">
+            두 대의 컴퓨터를 한 대처럼 자유롭게 오가는 Easy-Switch™와 소음 없는 클릭감.<br>
+            조용하지만 강력한 정밀함으로 프로페셔널한 데스크 환경을 완성합니다.
+          </p>
+        </div>
+
+        <!-- Center Mouse Presentation Card (Smooth scale-up on hover) -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <div class="product-hero-card">
+          <div class="product-card-topbar">
+            <button id="main-channel-switcher" class="channel-switcher" title="클릭하여 채널 전환">
+              <span class="status-indicator"></span>
+              <span id="main-channel-text">연결 채널: PC 1</span>
+              <span style="font-size:10px;text-decoration:underline;margin-left:4px;">스위칭</span>
+            </button>
+
+            <div class="single-color-tag">
+              <span class="color-preview-circle"></span>
+              <span>그래파이트 (단일 컬러)</span>
+            </div>
+          </div>
+
+          <!-- Centered Mouse Image with Smooth Scale-up Effect -->
+          <!-- TODO: Replace with GitHub repository link/path -->
+          <div class="mouse-showcase-box">
+            <div class="mouse-img-wrapper">
+              <img
+                id="main-hero-image"
+                src="./assets/images/m-top-1.webp"
+                alt="로지텍 M590 Silent 마우스 정면 상단 뷰"
+                class="mouse-img"
+                data-fallback="true"
+              />
+            </div>
+            <p class="mouse-hover-hint">
+              마우스 위에 커서를 올리면 부드러운 확대(Scale-up) 효과가 적용됩니다.
+            </p>
+          </div>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary" data-nav-target="features">
+              주요 하드웨어 기능 살펴보기 →
+            </button>
+            <button class="btn-secondary" data-nav-target="brand">
+              브랜드 철학 &amp; FLOW 스토리
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Core Pillars Overview Section -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <section class="section-headline">
+          <h2>더 조용하게, 더 많은 작업을 스마트하게</h2>
+          <p>M590 Silent가 제공하는 4가지 핵심 생산성 솔루션</p>
+        </section>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🔇</div>
+            <h3>90% 소음 감소 클릭</h3>
+            <p>Logitech SilentTouch 기술로 클릭감은 그대로 유지하면서 클릭 소음은 90% 이상 획기적으로 줄였습니다.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">💻</div>
+            <h3>Easy-Switch™ 2대 연결</h3>
+            <p>버튼 하나로 노트북과 데스크톱, 혹은 태블릿 간의 연결을 1초 만에 즉각 전환할 수 있습니다.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📄</div>
+            <h3>Logitech FLOW™ 호환</h3>
+            <p>서로 다른 두 대의 PC 화면 사이로 커서를 넘나들며 텍스트와 파일을 손쉽게 복사 및 붙여넣기합니다.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔋</div>
+            <h3>최대 24개월 배터리</h3>
+            <p>AA 배터리 1개로 자동 절전 모드와 On/Off 스위치를 통해 최대 2년간 배터리 교체 없이 사용 가능합니다.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =======================================================================
+         VIEW 2: 기능 소개 (Features Page)
+         ======================================================================= -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <section id="tab-features" class="tab-view">
+      <div class="container">
+        <div class="hero-header">
+          <div class="pill-badge">하드웨어 정밀 설계 &amp; Logi Options+</div>
+          <h2 class="hero-title">M590 핵심 기능 &amp; 맵핑</h2>
+          <p class="hero-subtitle">
+            정밀한 하드웨어 버튼부터 스마트 액션 자동화까지, 손끝에서 시작되는 압도적인 생산성.
+          </p>
+        </div>
+
+        <!-- Hardware Features Interactive Grid -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <div class="features-layout">
+          <div class="features-list">
+            <button class="feature-select-btn feature-card active" data-feature="easySwitch">
+              <span class="feature-num">기능 01</span>
+              <h4>Easy-Switch™ 버튼 &amp; LED 표시등</h4>
+              <p>최대 2대 기기(PC, 맥, 태블릿)를 스위칭 가능. 상단 번호 표시등(1, 2) LED로 현재 연결된 채널을 즉시 확인합니다.</p>
+            </button>
+
+            <button class="feature-select-btn feature-card" data-feature="sideButtons">
+              <span class="feature-num">기능 02</span>
+              <h4>커스텀 측면 엄지 버튼 (듀얼 버튼)</h4>
+              <p>좌측 엄지 영역의 2개 버튼(앞으로/뒤로 가기). 소프트웨어를 통해 복사/붙여넣기나 제스처로 재맵핑 가능합니다.</p>
+            </button>
+
+            <button class="feature-select-btn feature-card" data-feature="powerSwitch">
+              <span class="feature-num">기능 03</span>
+              <h4>하단 On/Off 전원 슬라이드 스위치</h4>
+              <p>하단 슬라이드 스위치와 지능형 자동 절전 모드로 불필요한 전력 소모를 방지하고 배터리 수명을 극대화합니다.</p>
+            </button>
+
+            <button class="feature-select-btn feature-card" data-feature="wheel">
+              <span class="feature-num">기능 04</span>
+              <h4>초정밀 휠 &amp; 좌우 틸트(Tilt) 기능</h4>
+              <p>마이크로 단위의 정밀 스크롤링과 휠을 좌우로 기울여 문서나 웹페이지를 수평 스크롤하는 틸트 기능 지원.</p>
+            </button>
+
+            <button class="feature-select-btn feature-card" data-feature="unifying">
+              <span class="feature-num">기능 05</span>
+              <h4>Unifying™ USB 초소형 무선 수신기</h4>
+              <p>2.4GHz 무선 수신기. 배터리 슬롯 내부에 안전하게 보관할 수 있으며 최대 6대의 호환 기기를 하나로 연결합니다.</p>
+            </button>
+          </div>
+
+          <!-- Interactive 360° Hardware Display (2D Image Version / 3D Modeling Version) -->
+          <div class="hardware-visual-card viewer-360-card">
+            <div class="visual-top-status">
+              <span style="font-size:12px;font-weight:700;">🟢 360° 하드웨어 실시간 뷰어</span>
+              <span style="font-size:11px;color:var(--color-text-muted);">M590 Graphite Series</span>
+            </div>
+
+            <!-- Mode Switch Toggle UI -->
+            <div class="viewer-mode-toggle" role="tablist" aria-label="뷰어 모드 전환">
+              <button
+                type="button"
+                id="mode-btn-2d"
+                class="viewer-mode-btn active"
+                data-viewer-mode="2d"
+                role="tab"
+                aria-selected="true"
+              >
+                2D 이미지 버전
+              </button>
+              <button
+                type="button"
+                id="mode-btn-3d"
+                class="viewer-mode-btn"
+                data-viewer-mode="3d"
+                role="tab"
+                aria-selected="false"
+              >
+                3D 모델링 버전
+              </button>
+            </div>
+
+            <!-- Panel A: 2D Image Version (Default View) -->
+            <div id="viewer-2d-panel" class="viewer-panel active">
+              <div class="hardware-image-display">
+                <img
+                  id="hardware-angle-image"
+                  src="./assets/images/m-top-1.webp"
+                  alt="로지텍 M590 상단 뷰"
+                  data-fallback="true"
+                />
+              </div>
+
+              <!-- Angle Switcher Buttons -->
+              <div class="angle-switcher-strip">
+                <button type="button" class="angle-btn active" data-angle="top">상단 뷰</button>
+                <button type="button" class="angle-btn" data-angle="side">측면 뷰</button>
+                <button type="button" class="angle-btn" data-angle="bottom">하단 뷰</button>
+              </div>
+            </div>
+
+            <!-- Panel B: 3D Modeling Version (Lazy Loaded <model-viewer>) -->
+            <div id="viewer-3d-panel" class="viewer-panel" hidden>
+              <div class="model-3d-box">
+                <div id="model-loading-state" class="model-loading-state" hidden>
+                  <div class="model-spinner" aria-hidden="true"></div>
+                  <p>3D 모델을 불러오는 중입니다...</p>
+                </div>
+
+                <div id="model-error-state" class="model-error-state" hidden>
+                  <span class="model-error-icon">⚠️</span>
+                  <p>3D 모델을 불러올 수 없습니다. 파일 경로를 확인하거나 2D 이미지 버전을 이용해 주세요.</p>
+                </div>
+
+                <div id="model-viewer-mount" class="model-viewer-mount"></div>
+              </div>
+              <p class="model-interaction-hint desktop-only-hint">
+                마우스로 드래그하여 360° 회전하고, 스크롤하여 확대/축소할 수 있습니다.
+              </p>
+
+              <!-- Touch Gesture Guide (Bottom of 3D Viewer Card) -->
+              <div class="model-touch-guide" role="note" aria-label="모바일 터치 제스처 조작 안내">
+                <p class="model-touch-guide-title">터치 제스처 조작 안내</p>
+                <div class="model-touch-gesture-list">
+                  <span class="touch-gesture-item">👆 한 손가락 드래그: 360° 회전</span>
+                  <span class="touch-gesture-item">🤏 두 손가락 핀치: 확대 / 축소</span>
+                  <span class="touch-gesture-item">✌️ 두 손가락 드래그: 시점 이동</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logi Options+ Custom Button Mapping Section -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <div class="mapping-section-card mapping-container">
+          <div style="margin-bottom:20px;">
+            <span class="drawer-tag">Logi Options+</span>
+            <h3 style="font-size:22px;font-weight:800;margin-top:4px;">커스텀 기능 맵핑 (Button Customization)</h3>
+            <p style="font-size:13px;color:var(--color-text-muted);">측면 2개 버튼에 원하는 명령을 직접 지정하고 가상 실행해보세요.</p>
+          </div>
+
+          <div class="mapping-grid">
+            <div class="mapping-controls">
+              <!-- Custom Mapping Preview & Input Box -->
+              <div class="mapping-box custom-mapping-preview-box">
+                <h4>
+                  <span>커스텀 맵핑 프리뷰 &amp; 입력창</span>
+                  <span class="mapping-target-indicator">지정 대상: <strong id="mapping-target-name">Button 4 (상단)</strong></span>
+                </h4>
+
+                <div class="target-btn-group">
+                  <button type="button" class="target-btn active" data-target="b4">Button 4 지정</button>
+                  <button type="button" class="target-btn" data-target="b5">Button 5 지정</button>
+                </div>
+
+                <div class="custom-mapping-input-wrap">
+                  <input
+                    type="text"
+                    id="customMappingInput"
+                    class="custom-mapping-input"
+                    value="앞으로 가기 (기본값)"
+                    readonly
+                    placeholder="옵션 버튼을 클릭하여 기능을 지정하세요"
+                  />
+                </div>
+
+                <div class="quick-recommend-strip">
+                  <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">추천 옵션 바로가기:</span>
+                  <button type="button" class="quick-option-btn" data-mapping-id="copy_paste">복사 / 붙여넣기</button>
+                  <button type="button" class="quick-option-btn" data-mapping-id="calc">계산기 실행</button>
+                  <button type="button" class="quick-option-btn" data-mapping-id="screenshot">화면 캡처 도구</button>
+                </div>
+
+                <p id="previewArea" class="custom-mapping-preview-desc">
+                  웹 브라우저 및 탐색기 다음 페이지로 이동
+                </p>
+              </div>
+
+              <div class="mapping-box">
+                <h4>
+                  <span>측면 상단 버튼 (Button 4)</span>
+                  <span id="b4-badge" class="mapping-badge">앞으로</span>
+                </h4>
+                <select id="b4-select" class="mapping-select">
+                  <option value="forward">앞으로 가기 (기본값)</option>
+                  <option value="back">뒤로 가기 (기본값)</option>
+                  <option value="copy_paste">복사 / 붙여넣기 (권장)</option>
+                  <option value="zoom">화면 확대 / 축소</option>
+                  <option value="volume">볼륨 음소거 / 조절</option>
+                  <option value="calc">계산기 실행</option>
+                  <option value="redo">다시 실행 (Redo)</option>
+                  <option value="new_tab">새 브라우저 탭 열기</option>
+                  <option value="screenshot">화면 캡처 도구</option>
+                  <option value="emoji">이모티콘 팝업</option>
+                  <option value="lock">시스템 화면 잠금</option>
+                  <option value="lang_switch">입력 언어 전환</option>
+                  <option value="open_folder">지정 폴더 열기</option>
+                  <option value="media_play">미디어 재생/일시정지</option>
+                </select>
+              </div>
+
+              <div class="mapping-box">
+                <h4>
+                  <span>측면 하단 버튼 (Button 5)</span>
+                  <span id="b5-badge" class="mapping-badge">뒤로</span>
+                </h4>
+                <select id="b5-select" class="mapping-select">
+                  <option value="forward">앞으로 가기 (기본값)</option>
+                  <option value="back">뒤로 가기 (기본값)</option>
+                  <option value="copy_paste">복사 / 붙여넣기 (권장)</option>
+                  <option value="zoom">화면 확대 / 축소</option>
+                  <option value="volume">볼륨 음소거 / 조절</option>
+                  <option value="calc">계산기 실행</option>
+                  <option value="redo">다시 실행 (Redo)</option>
+                  <option value="new_tab">새 브라우저 탭 열기</option>
+                  <option value="screenshot">화면 캡처 도구</option>
+                  <option value="emoji">이모티콘 팝업</option>
+                  <option value="lock">시스템 화면 잠금</option>
+                  <option value="lang_switch">입력 언어 전환</option>
+                  <option value="open_folder">지정 폴더 열기</option>
+                  <option value="media_play">미디어 재생/일시정지</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mapping-box">
+              <h4 style="margin-bottom:12px;">사용 가능한 공식 기능 라이브러리 (14종)</h4>
+              <div id="mapping-library-grid" class="mapping-library-grid">
+                <!-- Dynamically generated via main.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart Actions Guide & Automation Simulator -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <div class="smart-actions-card">
+          <div style="margin-bottom:20px;">
+            <span class="drawer-tag">Smart Actions</span>
+            <h3 style="font-size:22px;font-weight:800;margin-top:4px;">Smart Actions 설정 가이드 &amp; 자동화 흐름</h3>
+            <p style="font-size:13px;color:var(--color-text-muted);">반복되는 여러 번의 키보드/마우스 입력을 하나의 액션으로 묶어주는 지능형 매크로 시스템</p>
+          </div>
+
+          <div class="smart-steps-grid">
+            <div class="step-card">
+              <div>
+                <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">STEP 1</span>
+                <h4 style="font-size:16px;font-weight:700;margin:4px 0 8px;">IF (트리거) 조건 지정</h4>
+                <p style="font-size:12px;color:var(--color-text-muted);">버튼 클릭, 제스처, 특정 프로그램 포커스 등 트리거 시작 조건을 설정합니다.</p>
+                <div class="step-options-list">
+                  <div class="step-option-btn active">조건 A: 측면 상단 버튼 1회 클릭 시</div>
+                  <div class="step-option-btn">조건 B: 스크롤 휠 우측 틸트(기울임) 시</div>
+                  <div class="step-option-btn">조건 C: 측면 하단 버튼 더블 클릭 시</div>
+                </div>
+              </div>
+              <div style="font-size:11px;color:var(--color-text-subtle);border-top:1px solid var(--color-card-border);padding-top:12px;">
+                설정됨: <strong>측면 상단 버튼 1회 클릭</strong>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div>
+                <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">STEP 2</span>
+                <h4 style="font-size:16px;font-weight:700;margin:4px 0 8px;">THEN (동작) 순차적 자동화 실행</h4>
+                <p style="font-size:12px;color:var(--color-text-muted);">애플리케이션 실행, 연속 단축키 입력, 텍스트 자동 붙여넣기, 시스템 명령을 실행합니다.</p>
+                <div class="step-options-list">
+                  <div class="step-option-btn active">동작 1: 화상회의 준비 (Zoom 실행 + 마이크 음소거 + 메모장 열기)</div>
+                  <div class="step-option-btn">동작 2: 개발 워크스페이스 (VS Code + 터미널 + 브라우저 동시 런칭)</div>
+                  <div class="step-option-btn">동작 3: 보안 빠른 잠금 (모든 창 최소화 + 시스템 즉시 잠금)</div>
+                </div>
+              </div>
+              <div>
+                <button id="run-smart-action-btn" class="btn-primary" style="width:100%;justify-content:center;">
+                  스마트 액션 시뮬레이션 테스트 실행 ⚡
+                </button>
+                <div id="smart-action-feedback" style="display:none;margin-top:10px;padding:8px;background:#e6f9f4;color:#0b7a66;border-radius:6px;font-size:12px;text-align:center;font-weight:700;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 3: 브랜드 소개 (Brand Info Page)
+         ======================================================================= -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <section id="tab-brand" class="tab-view">
+      <div class="container">
+        <div class="hero-header">
+          <div class="pill-badge">로지텍 공식 브랜드 스토리</div>
+          <h2 class="hero-title">사람과 디지털 세계를 연결하는<br />디자인 혁신</h2>
+        </div>
+
+        <!-- Brand 2-Column Split Layout (Left: Text, Right: Subtle Image) -->
+        <!-- TODO: Replace with GitHub repository link/path -->
+        <div class="brand-split-container">
+          <!-- Left Column: Text Description & Pillars -->
+          <div class="brand-text-column">
+            <div class="brand-header-text">
+              <!-- Dynamically populated from ./assets/data/content.json -->
+              <h3 id="brand-dynamic-title" class="brand-title">회사 소개</h3>
+              <!-- Dynamically populated from ./assets/data/content.json -->
+              <p id="brand-dynamic-description" class="brand-desc">
+                로지텍은 일과 여가에서 개인의 잠재된 역량을 확장시키는 것이 사명입니다.
+              </p>
+            </div>
+
+            <!-- 3 Key Innovation Pillars -->
+            <div class="brand-pillars">
+              <h4 class="brand-pillars-heading">로지텍이 정의하는 3대 혁신 사용자 경험</h4>
+              
+              <div class="brand-pillar-item">
+                <h5>01. Logitech Options+ (개인 맞춤형 최적화)</h5>
+                <p>모든 마우스 버튼과 제스처를 사용자의 작업 스타일에 맞춰 정밀하게 재정의하고 애플리케이션별 자동 프로필을 지원합니다.</p>
+              </div>
+
+              <div class="brand-pillar-item">
+                <h5>02. Logitech FLOW™ (경계 없는 멀티 컴퓨터 제어)</h5>
+                <p>한 대의 마우스로 Windows와 Mac 등 서로 다른 컴퓨터 화면을 자유롭게 넘나들며 텍스트, 이미지, 파일을 복사하고 붙여넣습니다.</p>
+              </div>
+
+              <div class="brand-pillar-item">
+                <h5>03. Smart Actions (지능형 원클릭 자동화 매크로)</h5>
+                <p>매일 반복되는 일상적인 업무 흐름을 버튼 한 번으로 실행하여 불필요한 단축키 입력과 시간을 절약합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Subtle Image Display -->
+          <!-- TODO: Replace with GitHub repository link/path -->
+          <div class="brand-image-column">
+            <div class="brand-image-frame">
+              <!-- TODO: Replace with GitHub repository link/path -->
+              <img
+                src="./assets/images/brand-description.webp"
+                alt="로지텍 브랜드 및 제품 워크스페이스 이미지"
+                class="brand-subtle-img"
+                data-fallback="true"
+              />
+              <div class="brand-image-overlay"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiss Heritage & Sustainability Banner -->
+        <div class="pillars-grid" style="margin-top:40px;">
+          <div class="pillar-card">
+            <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">정밀 엔지니어링</span>
+            <h4 style="font-size:16px;font-weight:700;margin:4px 0 8px;">스위스 정밀 기술</h4>
+            <p>40년 이상 축적된 센서 기술과 기구학적 설계로 어떤 표면에서도 부드럽고 정확한 트래킹을 제공합니다.</p>
+          </div>
+          <div class="pillar-card">
+            <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">환경과 미래</span>
+            <h4 style="font-size:16px;font-weight:700;margin:4px 0 8px;">지속 가능성 디자인</h4>
+            <p>재활용 플라스틱(PCR)을 적극 도입하고 제품 전 과정의 탄소 발자국을 투명하게 공개하고 상쇄합니다.</p>
+          </div>
+          <div class="pillar-card">
+            <span style="font-size:11px;font-weight:700;color:var(--color-text-subtle);">글로벌 신뢰</span>
+            <h4 style="font-size:16px;font-weight:700;margin:4px 0 8px;">전 세계 사용자 검증</h4>
+            <p>수억 명의 크리에이터, 엔지니어, 비즈니스 전문가들이 매일 신뢰하며 사용하는 글로벌 No.1 브랜드입니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- TODO: Replace with GitHub repository link/path -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <!-- TODO: Replace with GitHub repository link/path -->
+            <img
+              src="./assets/images/logo.webp"
+              alt="Logitech Logo"
+              class="footer-logo"
+              data-fallback="true"
+            />
+            <span class="footer-disclaimer-note">| 본 사이트는 학생 연구 및 과제 제출용 비공식 페이지입니다. (Google AI Studio 사용 · 비상업용 목적 사이트)</span>
+          </div>
+
+          <div class="footer-links">
+            <button data-nav-target="main">메인 제품</button>
+            <button data-nav-target="features">기능 상세</button>
+            <button data-nav-target="brand">브랜드 소개</button>
+            <span style="color:var(--color-text-subtle);">·</span>
+            <span style="color:var(--color-text-subtle);">Logi Options+ 지원</span>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Logitech. 판권 소유. Logitech, Logi 및 Logitech 로고는 Logitech Europe S.A.의 상표입니다.</p>
+          <div>
+            <span>개인정보 처리방침</span> |
+            <span>이용약관</span> |
+            <span>학생 프로젝트</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

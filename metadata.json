@@ -1,0 +1,6 @@
+{
+  "name": "로지텍 마우스 제품 상세 & 브랜드 쇼케이스",
+  "description": "로지텍 M590 Silent 멀티 디바이스 무선 마우스 상세 기능, Easy-Switch 및 커스텀 맵핑, 브랜드 스토리 소개 공식 단일 페이지 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
