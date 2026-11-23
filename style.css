@@ -510,7 +510,10 @@ body.dark .drawer-card {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
   padding: 20px 0;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -529,6 +532,7 @@ body.dark .drawer-card {
 
 .mouse-img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
@@ -743,11 +747,14 @@ body.dark .drawer-card {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .hardware-image-display img {
+  max-width: 100%;
   max-height: 280px;
   width: auto;
+  height: auto;
   object-fit: contain;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.15));
 }
@@ -790,6 +797,7 @@ body.dark .drawer-card {
   grid-template-columns: 1fr;
   gap: 28px;
   margin-top: 24px;
+  align-items: stretch;
 }
 @media (min-width: 900px) {
   .mapping-grid {
@@ -808,6 +816,10 @@ body.dark .drawer-card {
   padding: 20px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-card-border);
+}
+.mapping-grid > .mapping-box {
+  display: flex;
+  flex-direction: column;
 }
 .mapping-box h4 {
   font-size: 14px;
@@ -839,16 +851,26 @@ body.dark .drawer-card {
 
 .mapping-library-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 8px;
-  max-height: 320px;
-  overflow-y: auto;
-  padding-right: 4px;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 10px;
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .mapping-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(58px, 1fr);
+    align-content: stretch;
+    gap: 10px;
+  }
 }
 
 .mapping-item-chip {
-  padding: 10px;
-  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 14px;
+  font-size: 12px;
   font-weight: 600;
   border-radius: var(--radius-sm);
   background: var(--color-bg);
@@ -1521,53 +1543,59 @@ body.dark-mode .step-option-btn.active {
   html, body {
     overflow-x: hidden;
     width: 100%;
+    max-width: 100vw;
   }
 
   .container {
     padding: 0 16px;
+    max-width: 100%;
   }
 
   /* 1. Disclaimer Banner */
   .disclaimer-banner {
-    font-size: 10.5px;
+    font-size: 12px;
     padding: 8px 12px;
     word-break: keep-all;
-    line-height: 1.45;
+    line-height: 1.5;
   }
 
   /* 2. Top Header */
   .top-header-inner {
     height: auto;
     min-height: 54px;
-    padding: 8px 0;
+    padding: 10px 16px;
     gap: 10px;
     flex-wrap: wrap;
   }
   .header-brand-wrap {
     gap: 8px;
+    max-width: 100%;
+    min-width: 0;
   }
   .header-logo-img {
     height: 22px;
+    width: auto;
+    max-width: 110px;
   }
   .header-badge {
-    font-size: 10px;
-    padding: 2px 6px;
+    font-size: 11.5px;
+    padding: 3px 8px;
   }
   .header-actions {
     gap: 6px;
   }
   .drawer-toggle-btn {
-    font-size: 11px;
-    padding: 5px 8px;
+    font-size: 12.5px;
+    padding: 6px 10px;
   }
   .theme-toggle-btn {
-    font-size: 11px;
-    padding: 5px 10px;
+    font-size: 12.5px;
+    padding: 6px 11px;
   }
 
   /* Top Drawer on Mobile */
   .top-drawer.open {
-    max-height: 800px;
+    max-height: 860px;
     padding: 18px 0;
   }
   .drawer-header {
@@ -1575,15 +1603,25 @@ body.dark-mode .step-option-btn.active {
     gap: 12px;
     margin-bottom: 14px;
   }
+  .drawer-tag {
+    font-size: 12px;
+  }
   .drawer-title {
-    font-size: 16px;
+    font-size: 17px;
   }
   .drawer-desc {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.55;
   }
   .drawer-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  .drawer-card h4 {
+    font-size: 15px;
+  }
+  .drawer-card p {
+    font-size: 13.5px;
   }
 
   /* 3. Navigation Bar (GNB) - Touch-friendly scrollable strip */
@@ -1594,7 +1632,7 @@ body.dark-mode .step-option-btn.active {
   }
   .nav-btn {
     padding: 12px 14px;
-    font-size: 13px;
+    font-size: 14px;
     flex-shrink: 0;
   }
 
@@ -1608,8 +1646,11 @@ body.dark-mode .step-option-btn.active {
     margin-bottom: 24px;
   }
   .pill-badge {
-    font-size: 11px;
-    padding: 5px 12px;
+    font-size: 12.5px;
+    padding: 6px 12px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .hero-title {
     font-size: 26px;
@@ -1618,50 +1659,86 @@ body.dark-mode .step-option-btn.active {
     margin-bottom: 12px;
   }
   .hero-subtitle {
-    font-size: 13px;
-    line-height: 1.55;
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 
-  /* Product Hero Presentation Card */
+  /* Product Hero Presentation Card (Top Board) */
   .product-hero-card {
+    width: 100%;
+    max-width: 100%;
     padding: 20px 14px;
     border-radius: var(--radius-lg);
     margin-bottom: 36px;
+    overflow: hidden;
   }
   .product-card-topbar {
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .channel-switcher {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
-    padding: 8px 12px;
+    padding: 9px 12px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .channel-switcher span {
+    font-size: inherit;
   }
   .single-color-tag {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
-    padding: 8px 12px;
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+  .mouse-showcase-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 8px;
+    overflow: hidden;
   }
   .mouse-img-wrapper {
-    max-width: 220px;
+    width: 100%;
+    max-width: min(200px, 68vw);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .product-hero-card:hover .mouse-img-wrapper,
+  .mouse-showcase-box:hover .mouse-img-wrapper {
+    transform: none;
+  }
+  .mouse-img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.14));
   }
   .mouse-hover-hint {
-    font-size: 11px;
+    font-size: 13px;
+    line-height: 1.45;
     margin-top: 10px;
+    word-break: keep-all;
   }
   .hero-cta-group {
     flex-direction: column;
     gap: 10px;
-    margin-top: 24px;
+    margin-top: 22px;
   }
   .hero-cta-group .btn-primary,
   .hero-cta-group .btn-secondary {
     width: 100%;
     justify-content: center;
-    padding: 12px 16px;
-    font-size: 13px;
+    padding: 13px 16px;
+    font-size: 14.5px;
   }
 
   /* Core 4 Pillars Grid */
@@ -1669,10 +1746,12 @@ body.dark-mode .step-option-btn.active {
     margin: 36px auto 20px;
   }
   .section-headline h2 {
-    font-size: 20px;
+    font-size: 21px;
+    word-break: keep-all;
   }
   .section-headline p {
-    font-size: 13px;
+    font-size: 14.5px;
+    line-height: 1.55;
   }
   .pillars-grid {
     grid-template-columns: 1fr;
@@ -1680,6 +1759,13 @@ body.dark-mode .step-option-btn.active {
   }
   .pillar-card {
     padding: 18px 16px;
+  }
+  .pillar-card h3 {
+    font-size: 17px;
+  }
+  .pillar-card p {
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   /* 6. Features Page & Custom Mapping */
@@ -1694,11 +1780,15 @@ body.dark-mode .step-option-btn.active {
   .feature-select-btn {
     padding: 14px 14px;
   }
+  .feature-num {
+    font-size: 12.5px;
+  }
   .feature-select-btn h4 {
-    font-size: 14px;
+    font-size: 15.5px;
   }
   .feature-select-btn p {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   /* Hardware Angle Viewer on Mobile */
@@ -1706,16 +1796,29 @@ body.dark-mode .step-option-btn.active {
     min-height: auto;
     padding: 20px 14px;
     border-radius: var(--radius-lg);
+    overflow: hidden;
   }
   .visual-top-status {
     padding-bottom: 12px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .visual-top-status span {
+    font-size: 13px !important;
   }
   .hardware-image-display {
-    min-height: 180px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 160px;
+    overflow: hidden;
   }
   .hardware-image-display img {
-    max-height: 180px;
+    max-width: 100%;
+    max-height: 170px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
   .angle-switcher-strip {
     flex-wrap: wrap;
@@ -1729,8 +1832,8 @@ body.dark-mode .step-option-btn.active {
     flex: 1 1 calc(33.333% - 6px);
     min-width: 72px;
     text-align: center;
-    padding: 8px 6px;
-    font-size: 11px;
+    padding: 9px 6px;
+    font-size: 12.5px;
   }
 
   /* Mapping Section Card */
@@ -1738,6 +1841,10 @@ body.dark-mode .step-option-btn.active {
     padding: 20px 14px;
     border-radius: var(--radius-lg);
     margin-bottom: 36px;
+  }
+  .mapping-section-card > div p {
+    font-size: 14.5px !important;
+    line-height: 1.55;
   }
   .mapping-grid {
     grid-template-columns: 1fr;
@@ -1752,9 +1859,16 @@ body.dark-mode .step-option-btn.active {
     border-radius: var(--radius-sm);
   }
   .mapping-box h4 {
-    font-size: 13px;
+    font-size: 14.5px;
     flex-wrap: wrap;
     gap: 6px;
+  }
+  .mapping-badge,
+  .mapping-target-indicator {
+    font-size: 12.5px;
+  }
+  .mapping-select {
+    font-size: 14px;
   }
 
   /* Target Button Toggle Group */
@@ -1765,35 +1879,47 @@ body.dark-mode .step-option-btn.active {
   .target-btn {
     width: 100%;
     text-align: center;
-    padding: 8px 10px;
+    padding: 10px 12px;
+    font-size: 13px;
   }
   .custom-mapping-input-wrap {
     margin: 8px 0;
   }
   .custom-mapping-input {
-    font-size: 12px;
-    padding: 9px 10px;
+    font-size: 14px;
+    padding: 10px 12px;
   }
 
   /* Quick Options & Chips Wrap */
   .quick-recommend-strip {
     gap: 6px;
   }
+  .quick-recommend-strip > span {
+    font-size: 12.5px !important;
+    width: 100%;
+  }
   .quick-option-btn {
     flex: 1 1 calc(50% - 6px);
     text-align: center;
-    padding: 6px 8px;
-    font-size: 10.5px;
+    padding: 8px 10px;
+    font-size: 12.5px;
+  }
+  .custom-mapping-preview-desc {
+    font-size: 13.5px;
   }
 
   .mapping-library-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-    max-height: 260px;
+    gap: 8px;
+    max-height: 320px;
+    overflow-y: auto;
   }
   .mapping-item-chip {
-    padding: 8px;
-    font-size: 10.5px;
+    padding: 10px;
+    font-size: 12.5px;
+  }
+  .mapping-item-chip .chip-desc {
+    font-size: 12px;
   }
 
   /* Smart Actions on Mobile */
@@ -1801,12 +1927,32 @@ body.dark-mode .step-option-btn.active {
     padding: 20px 14px;
     border-radius: var(--radius-lg);
   }
+  .smart-actions-card > div p {
+    font-size: 14px !important;
+    line-height: 1.55;
+  }
   .smart-steps-grid {
     grid-template-columns: 1fr;
     gap: 14px;
   }
   .step-card {
     padding: 16px 12px;
+  }
+  .step-card > div > span {
+    font-size: 12.5px !important;
+  }
+  .step-card h4 {
+    font-size: 17px !important;
+  }
+  .step-card p {
+    font-size: 13.5px !important;
+    line-height: 1.55;
+  }
+  .step-option-btn {
+    font-size: 13.5px;
+  }
+  .step-card > div:last-child {
+    font-size: 12.5px !important;
   }
 
   /* 7. Brand Split Layout (Image on top/center, Text below) */
@@ -1817,16 +1963,31 @@ body.dark-mode .step-option-btn.active {
     gap: 20px;
     border-radius: var(--radius-lg);
     margin-bottom: 36px;
+    overflow: hidden;
   }
   .brand-image-column {
     order: 1; /* Image on top/center */
     width: 100%;
+    max-width: 100%;
   }
   .brand-image-frame {
     width: 100%;
-    min-height: 200px;
-    max-height: 260px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    min-height: 0;
+    max-height: 240px;
     border-radius: var(--radius-md);
+  }
+  .brand-subtle-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+  }
+  .brand-image-frame:hover .brand-subtle-img {
+    transform: none;
   }
   .brand-text-column {
     order: 2; /* Text below */
@@ -1834,23 +1995,27 @@ body.dark-mode .step-option-btn.active {
     gap: 18px;
   }
   .brand-title {
-    font-size: 22px;
+    font-size: 23px;
   }
   .brand-desc {
-    font-size: 13.5px;
-    line-height: 1.65;
+    font-size: 15px;
+    line-height: 1.7;
   }
   .brand-pillars {
     gap: 10px;
   }
+  .brand-pillars-heading {
+    font-size: 16px;
+  }
   .brand-pillar-item {
-    padding: 12px 14px;
+    padding: 14px;
   }
   .brand-pillar-item h5 {
-    font-size: 13px;
+    font-size: 14.5px;
   }
   .brand-pillar-item p {
-    font-size: 11.5px;
+    font-size: 13.5px;
+    line-height: 1.55;
   }
 
   /* 8. Footer */
@@ -1869,20 +2034,94 @@ body.dark-mode .step-option-btn.active {
     gap: 6px;
   }
   .footer-disclaimer-note {
-    font-size: 10.5px;
+    font-size: 12.5px;
+    line-height: 1.5;
   }
   .footer-links {
     flex-wrap: wrap;
     gap: 10px;
   }
-  .footer-links button {
-    font-size: 11.5px;
+  .footer-links button,
+  .footer-links span {
+    font-size: 13px;
   }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    font-size: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile Portrait Simplification (max-width: 520px) */
+@media (max-width: 520px) {
+  /* Break top notice into separate clean lines per item */
+  .disclaimer-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 14px;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .disclaimer-sep {
+    display: none;
+  }
+
+  /* Simplify header to a single clean non-cramped row */
+  .top-header-inner {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .header-badge {
+    display: none;
+  }
+  .header-logo-img {
+    height: 20px;
+    max-width: 92px;
+  }
+  .header-actions {
+    flex-shrink: 0;
+    gap: 6px;
+  }
+  .drawer-toggle-btn,
+  .theme-toggle-btn {
+    font-size: 11.5px;
+    padding: 6px 9px;
+    white-space: nowrap;
+  }
+
+  /* Navigation fits cleanly without edge clipping */
+  .nav-inner {
+    padding: 0 8px;
+    justify-content: space-around;
+    gap: 2px;
+  }
+  .nav-btn {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  /* Simplify secondary clutter in portrait view */
+  .mouse-hover-hint {
+    display: none;
+  }
+  .visual-top-status span:last-child {
+    display: none;
+  }
+  .mapping-box h4 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .mapping-library-grid {
+    grid-template-columns: 1fr;
+    max-height: 280px;
+  }
+  .footer-disclaimer-note {
+    display: none;
   }
 }
 
@@ -1891,8 +2130,11 @@ body.dark-mode .step-option-btn.active {
   .hero-title {
     font-size: 22px;
   }
-  .mapping-library-grid {
-    grid-template-columns: 1fr;
+  .mouse-img-wrapper {
+    max-width: min(176px, 64vw);
+  }
+  .mouse-img {
+    max-height: 176px;
   }
   .quick-option-btn {
     flex: 1 1 100%;
