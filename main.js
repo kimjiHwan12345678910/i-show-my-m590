@@ -37,7 +37,9 @@ const mappingLibrary = [
   { id: 'media_play', name: '미디어 재생/일시정지', desc: '음악 및 비디오 플레이어 원클릭 제어' },
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
+const BASE_URL = import.meta.env.BASE_URL;
+
+function initApp() {
   initTheme();
   initNavigation();
   initDrawer();
@@ -46,7 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeaturesInteractions();
   init360Viewer();
   fetchBrandContent();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /**
  * 테마 초기화 및 라이트/다크 모드 전환 (Button_T)
@@ -210,8 +218,8 @@ function initMainInteractions() {
       if (heroImage) {
         heroImage.src =
           state.activeChannel === 1
-            ? './assets/images/m-top-1.webp'
-            : './assets/images/m-top-2.webp';
+            ? `${BASE_URL}assets/images/m-top-1.webp`
+            : `${BASE_URL}assets/images/m-top-2.webp`;
         heroImage.alt = `로지텍 M590 Silent 마우스 정면 상단 뷰 (연결 채널 ${state.activeChannel})`;
       }
     });
@@ -298,7 +306,7 @@ function init360Viewer() {
 
         const viewer = document.createElement('model-viewer');
         viewer.id = 'm590-model-viewer';
-        viewer.setAttribute('src', './assets/models/m590.glb');
+        viewer.setAttribute('src', `${BASE_URL}assets/models/m590.glb`);
         viewer.setAttribute('alt', '로지텍 M590 Silent 3D 모델');
         viewer.setAttribute('camera-controls', '');
         viewer.setAttribute('auto-rotate', '');
@@ -364,13 +372,13 @@ function initFeaturesInteractions() {
 
       if (angleImage) {
         if (angle === 'top') {
-          angleImage.src = './assets/images/m-top-1.webp';
+          angleImage.src = `${BASE_URL}assets/images/m-top-1.webp`;
           angleImage.alt = '로지텍 M590 상단 뷰';
         } else if (angle === 'side') {
-          angleImage.src = './assets/images/m-left-side.webp';
+          angleImage.src = `${BASE_URL}assets/images/m-left-side.webp`;
           angleImage.alt = '로지텍 M590 측면 뷰';
         } else if (angle === 'bottom') {
-          angleImage.src = './assets/images/m-bottom.webp';
+          angleImage.src = `${BASE_URL}assets/images/m-bottom.webp`;
           angleImage.alt = '로지텍 M590 하단 뷰';
         }
       }
@@ -577,7 +585,7 @@ function fetchBrandContent() {
   const brandTitleEl = document.getElementById('brand-dynamic-title');
   const brandDescEl = document.getElementById('brand-dynamic-description');
 
-  fetch('./assets/data/content.json')
+  fetch(`${BASE_URL}assets/data/content.json`)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

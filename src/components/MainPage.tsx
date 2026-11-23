@@ -89,7 +89,7 @@ export const MainPage: React.FC<MainPageProps> = ({ onNavigateToFeatures, onNavi
             {/* TODO: Replace with GitHub repository link/path */}
             <div className="relative transform transition-transform duration-700 ease-out group-hover:scale-105 cursor-pointer flex flex-col items-center">
               <img
-                src="./assets/images/m-top-1.webp"
+                src={`${import.meta.env.BASE_URL}assets/images/m-top-1.webp`}
                 alt="로지텍 M590 Silent 마우스 상단 정면 이미지"
                 className="w-64 sm:w-80 h-auto object-contain drop-shadow-2xl mx-auto"
                 onError={(e) => {

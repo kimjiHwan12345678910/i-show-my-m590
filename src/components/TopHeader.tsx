@@ -24,7 +24,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
         <div className="flex items-center gap-3">
           {/* TODO: Replace with GitHub repository link/path */}
           <img
-            src="./assets/images/logo.webp"
+            src={`${import.meta.env.BASE_URL}assets/images/logo.webp`}
             alt="Logitech Logo"
             className="h-6 w-auto object-contain"
             onError={(e) => {

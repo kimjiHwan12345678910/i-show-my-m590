@@ -11,7 +11,7 @@ export const BrandInfoPage: React.FC = () => {
 
   useEffect(() => {
     // Lightweight fetch script to load content.json
-    fetch('./assets/data/content.json')
+    fetch(`${import.meta.env.BASE_URL}assets/data/content.json`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load content.json');
         return res.json();
@@ -171,7 +171,7 @@ export const BrandInfoPage: React.FC = () => {
               <div className="mt-6 flex flex-col items-center justify-center">
                 {/* TODO: Replace with GitHub repository link/path */}
                 <img
-                  src="./assets/images/brand-description.webp"
+                  src={`${import.meta.env.BASE_URL}assets/images/brand-description.webp`}
                   alt="로지텍 브랜드 워크스페이스 대표 이미지"
                   className="w-full h-auto max-h-56 object-cover rounded-2xl border border-neutral-300 dark:border-neutral-700 shadow-sm"
                   onError={(e) => {

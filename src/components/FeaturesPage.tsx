@@ -270,19 +270,19 @@ export const FeaturesPage: React.FC = () => {
                 <div className="relative w-64 sm:w-80 h-72 flex items-center justify-center">
                   {selectedFeature === 'sideButtons' ? (
                     <img
-                      src="./assets/images/m-left-side.webp"
+                      src={`${import.meta.env.BASE_URL}assets/images/m-left-side.webp`}
                       alt="로지텍 M590 측면 버튼 뷰"
                       className="max-h-64 w-auto object-contain drop-shadow-xl"
                     />
                   ) : selectedFeature === 'powerSwitch' || selectedFeature === 'unifying' ? (
                     <img
-                      src="./assets/images/m-bottom.webp"
+                      src={`${import.meta.env.BASE_URL}assets/images/m-bottom.webp`}
                       alt="로지텍 M590 하단 전원 및 수신기 슬롯 뷰"
                       className="max-h-64 w-auto object-contain drop-shadow-xl"
                     />
                   ) : (
                     <img
-                      src="./assets/images/m-top-1.webp"
+                      src={`${import.meta.env.BASE_URL}assets/images/m-top-1.webp`}
                       alt="로지텍 M590 상단 뷰"
                       className="max-h-64 w-auto object-contain drop-shadow-xl"
                     />
