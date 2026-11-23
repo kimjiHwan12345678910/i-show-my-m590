@@ -1053,6 +1053,11 @@ body.dark .drawer-card {
   border-color: #000000;
 }
 
+#run-smart-action-btn {
+  width: 100%;
+  justify-content: center;
+}
+
 /* ==========================================================================
    Brand Info Page Styling (2-Column Split Layout)
    ========================================================================== */
@@ -1776,8 +1781,12 @@ body.dark-mode .step-option-btn.active {
   }
   .features-list {
     gap: 10px;
+    align-items: center;
   }
   .feature-select-btn {
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
     padding: 14px 14px;
   }
   .feature-num {
@@ -1820,17 +1829,19 @@ body.dark-mode .step-option-btn.active {
     height: auto;
     object-fit: contain;
   }
-  .angle-switcher-strip {
+  #tab-features .angle-switcher-strip {
     flex-wrap: wrap;
     gap: 6px;
-    width: 100%;
+    width: 80%;
+    max-width: 80%;
     justify-content: center;
-    margin-top: 16px;
+    margin: 16px auto 0;
     padding-top: 12px;
   }
-  .angle-btn {
+  #tab-features .angle-btn {
     flex: 1 1 calc(33.333% - 6px);
-    min-width: 72px;
+    min-width: 64px;
+    max-width: 80%;
     text-align: center;
     padding: 9px 6px;
     font-size: 12.5px;
@@ -1874,10 +1885,13 @@ body.dark-mode .step-option-btn.active {
   /* Target Button Toggle Group */
   .target-btn-group {
     flex-direction: column;
-    gap: 6px;
+    align-items: center;
+    gap: 8px;
   }
   .target-btn {
-    width: 100%;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
     text-align: center;
     padding: 10px 12px;
     font-size: 13px;
@@ -1892,16 +1906,22 @@ body.dark-mode .step-option-btn.active {
 
   /* Quick Options & Chips Wrap */
   .quick-recommend-strip {
-    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
   .quick-recommend-strip > span {
     font-size: 12.5px !important;
     width: 100%;
+    text-align: left;
   }
   .quick-option-btn {
-    flex: 1 1 calc(50% - 6px);
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
     text-align: center;
-    padding: 8px 10px;
+    padding: 9px 12px;
     font-size: 12.5px;
   }
   .custom-mapping-preview-desc {
@@ -1915,6 +1935,7 @@ body.dark-mode .step-option-btn.active {
     overflow-y: auto;
   }
   .mapping-item-chip {
+    max-width: 100%;
     padding: 10px;
     font-size: 12.5px;
   }
@@ -1948,8 +1969,23 @@ body.dark-mode .step-option-btn.active {
     font-size: 13.5px !important;
     line-height: 1.55;
   }
+  .step-options-list {
+    align-items: center;
+  }
   .step-option-btn {
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
     font-size: 13.5px;
+  }
+  #run-smart-action-btn {
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    padding: 12px 14px;
   }
   .step-card > div:last-child {
     font-size: 12.5px !important;
@@ -2118,7 +2154,12 @@ body.dark-mode .step-option-btn.active {
   }
   .mapping-library-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
     max-height: 280px;
+  }
+  .mapping-item-chip {
+    width: 80%;
+    max-width: 80%;
   }
   .footer-disclaimer-note {
     display: none;
@@ -2135,9 +2176,6 @@ body.dark-mode .step-option-btn.active {
   }
   .mouse-img {
     max-height: 176px;
-  }
-  .quick-option-btn {
-    flex: 1 1 100%;
   }
 }
 
@@ -2377,12 +2415,13 @@ body.dark-mode .touch-gesture-item {
     padding: 18px 12px;
   }
   .viewer-mode-toggle {
-    max-width: 100%;
+    max-width: 80%;
+    margin-inline: auto;
     margin-bottom: 14px;
   }
   .viewer-mode-btn {
     min-height: 44px;
-    padding: 10px 12px;
+    padding: 10px 10px;
     font-size: 12px;
     -webkit-tap-highlight-color: transparent;
   }
